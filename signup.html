@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a public account with Haven House (prototype).">
+    <title>Sign up | Haven House</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/contact-details.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">H</span><span><strong>Haven House</strong><small>Support. Safety. A way forward.</small></span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <form class="search-form" role="search" data-site-search>
+                <label class="sr-only" for="site-search-input">Search services and pages</label>
+                <input id="site-search-input" type="search" placeholder="Search services..." autocomplete="off" aria-controls="site-search-results" aria-autocomplete="list">
+                <button type="submit" aria-label="Search">⌕</button>
+                <ul class="search-results" id="site-search-results" hidden></ul>
+            </form>
+               <a href="index.html">Home</a><a href="services.html">Our services</a><a href="faq.html">FAQs</a><a class="active" href="contact.html">Contact</a><a class="login-link" href="login.html">Log in</a><a class="nav-cta" href="services.html">Find support</a></nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container"><p class="eyebrow">CREATE AN ACCOUNT</p><h1>Create a public account.</h1><p>Accounts are for members of the public. This sign up form is a prototype. It does not create an account or store your details yet.</p></div>
+        </section>
+
+        <section class="section">
+            <div class="container login-wrap">
+                <form class="contact-form login-form" id="signup-form">
+                    <h2>Sign up</h2>
+                    <p>Do not use real details on this prototype.</p>
+                    <label for="signup-name">Name or preferred name</label>
+                    <input id="signup-name" name="name" type="text" autocomplete="given-name" required>
+                    <label for="signup-email">Email address</label>
+                    <input id="signup-email" name="email" type="email" autocomplete="email" required>
+                    <label for="signup-password">Password</label>
+                    <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                    <label for="signup-confirm">Confirm password</label>
+                    <input id="signup-confirm" name="confirm" type="password" autocomplete="new-password" minlength="8" required>
+                    <label class="consent-label"><input type="checkbox" name="consent" required> I have read the privacy notice and agree to be contacted about my enquiry.</label>
+                    <button class="button button-primary" type="submit">Create account</button>
+                    <p class="form-feedback" id="signup-feedback" role="status"></p>
+                </form>
+                <p class="login-help">Already have an account? <a href="login.html?role=public">Log in</a>. Staff? <a href="login.html?role=staff">Staff sign in</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">H</span><span><strong>Haven House</strong><small>Support. Safety. A way forward.</small></span></a><p> for service navigation. Not a live crisis service.</p><div class="footer-links"><a href="services.html">Services</a><a href="faq.html">FAQs</a><a href="contact.html">Contact</a></div></div><div class="container footer-contact" data-contact-details></div>
+        <div class="container footer-bottom">© <span data-year></span> Haven House prototype. Please verify contact details before production use.</div></footer>
+    <button class="assistant-launcher" type="button" aria-label="Open service navigation assistant" data-open-assistant><span aria-hidden="true">✦</span><span>Ask us</span></button>
+    <section class="assistant-panel" id="assistant-panel" aria-label="Service Navigation Assistant" hidden>
+        <div class="assistant-header"><div><strong>Haven House Assistant</strong><small>Service navigation prototype</small></div><button class="assistant-close" type="button" aria-label="Close assistant">×</button></div>
+        <div class="assistant-messages" id="assistant-messages" aria-live="polite"><div class="message assistant-message">Hi, I can help you browse service information. What would you like to explore?</div></div>
+        <div class="quick-replies"><button type="button" data-question="Accommodation">Accommodation</button><button type="button" data-question="Social work">Social work</button><button type="button" data-question="Wellbeing">Wellbeing</button><button type="button" data-question="FAQs">FAQs</button></div>
+        <form class="assistant-form" id="assistant-form"><label class="sr-only" for="assistant-input">Type your question</label><input id="assistant-input" name="question" type="text" placeholder="Type a question..." autocomplete="off" required><button type="submit" aria-label="Send message">➤</button></form>
+        <p class="assistant-disclaimer">Navigation only. Not a crisis response service.</p>
+    </section>
+</body>
+</html>

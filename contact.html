@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact guidance for Haven House service navigation.">
+    <title>Contact | Haven House</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/contact-details.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">H</span><span><strong>Haven House</strong><small>Support. Safety. A way forward.</small></span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <form class="search-form" role="search" data-site-search>
+                <label class="sr-only" for="site-search-input">Search services and pages</label>
+                <input id="site-search-input" type="search" placeholder="Search services..." autocomplete="off" aria-controls="site-search-results" aria-autocomplete="list">
+                <button type="submit" aria-label="Search">⌕</button>
+                <ul class="search-results" id="site-search-results" hidden></ul>
+            </form>
+               <a href="index.html">Home</a><a href="services.html">Our services</a><a href="faq.html">FAQs</a><a class="active" href="contact.html">Contact</a><a class="login-link" href="login.html">Log in</a><a class="nav-cta" href="services.html">Find support</a></nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container"><p class="eyebrow">GET IN TOUCH</p><h1>Find the right way to reach out.</h1><p>This page gives general contact guidance for the prototype. Add and verify official Haven House contact details before publishing.</p></div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-copy">
+                    <p class="eyebrow">CONTACT GUIDANCE</p>
+                    <h2>Speak with a person when you need specific help.</h2>
+                    <p>For service availability, eligibility, referrals, and appointments, use the organisation's official contact channels. The details below are intentionally not fabricated for this prototype.</p>
+                    <div class="notice-card"><strong>Prototype notice</strong><p>Add the official address, mobile number and email address in js/contact-details.js. They appear here and in the footer of every page.</p></div>
+                    <h3>Contact details</h3>
+                    <div class="contact-details" data-contact-details></div>
+
+                    <h3>Before you contact the service</h3>
+                    <ul class="check-list"><li>Decide which service you want to ask about.</li><li>Ask about current availability and eligibility.</li><li>Confirm whether you need a referral or appointment.</li></ul>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h2>Prepare a message</h2>
+                    <p>This  form does not send or store your message. Do not enter personal or sensitive information.</p>
+                    <label for="contact-topic">What would you like to ask about?</label>
+                    <select id="contact-topic" name="topic" required>
+                        <option value="">Choose a topic</option>
+                        <option>Accommodation</option>
+                        <option>Social work</option>
+                        <option>Wellbeing support</option>
+                        <option>NDIS navigation</option>
+                        <option>Chaplaincy</option>
+                        <option>Jobs and employment</option>
+                        <option>General enquiry</option>
+                    </select>
+                    <label for="contact-message">General question</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Write a general question (no personal details)." required></textarea>
+                    <button class="button button-primary" type="submit">Prepare message</button>
+                    <p class="form-feedback" id="contact-feedback" role="status"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section soft-section">
+            <div class="container safety-banner"><div><p class="eyebrow">URGENT SAFETY CONCERN</p><h2>Do not wait for this website.</h2><p>If there is immediate danger, contact local emergency services or a verified crisis support service now. This prototype cannot dispatch help.</p></div></div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">H</span><span><strong>Haven House</strong><small>Support. Safety. A way forward.</small></span></a><p> for service navigation. Not a live crisis service.</p><div class="footer-links"><a href="services.html">Services</a><a href="faq.html">FAQs</a><a href="contact.html">Contact</a></div></div><div class="container footer-contact" data-contact-details></div>
+        <div class="container footer-bottom">© <span data-year></span> Haven House prototype. Please verify contact details before production use.</div></footer>
+    <button class="assistant-launcher" type="button" aria-label="Open service navigation assistant" data-open-assistant><span aria-hidden="true">✦</span><span>Ask us</span></button>
+    <section class="assistant-panel" id="assistant-panel" aria-label="Service Navigation Assistant" hidden>
+        <div class="assistant-header"><div><strong>Haven House Assistant</strong><small>Service navigation prototype</small></div><button class="assistant-close" type="button" aria-label="Close assistant">×</button></div>
+        <div class="assistant-messages" id="assistant-messages" aria-live="polite"><div class="message assistant-message">Hi, I can help you browse service information. What would you like to explore?</div></div>
+        <div class="quick-replies"><button type="button" data-question="Accommodation">Accommodation</button><button type="button" data-question="Social work">Social work</button><button type="button" data-question="Wellbeing">Wellbeing</button><button type="button" data-question="FAQs">FAQs</button></div>
+        <form class="assistant-form" id="assistant-form"><label class="sr-only" for="assistant-input">Type your question</label><input id="assistant-input" name="question" type="text" placeholder="Type a question..." autocomplete="off" required><button type="submit" aria-label="Send message">➤</button></form>
+        <p class="assistant-disclaimer">Navigation only. Not a crisis response service.</p>
+    </section>
+</body>
+</html>
